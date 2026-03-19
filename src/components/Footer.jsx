@@ -36,7 +36,7 @@ function NavLink({ children, href = '#' }) {
     <a
       href={href}
       {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-      className="text-white/70 hover:text-[#FF5C00] transition-colors duration-200"
+      className="text-white/70 hover:text-[#FF5C00] transition-colors duration-200 max-md:!text-[14px]"
       style={LINK_STYLE}
     >
       {children}
@@ -49,16 +49,16 @@ const REPEATS = 6
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-black text-white overflow-hidden pt-32">
+    <footer id="contact" className="bg-black text-white overflow-hidden pt-32 max-md:pt-16">
 
       {/* ── Asymmetric padding wrapper: pl-245 pr-460 ── */}
-      <div className="pl-[245px] pr-[320px]">
+      <div className="pl-[245px] pr-[320px] max-md:pl-[30px] max-md:pr-[30px]">
 
         {/* Grid: brand / platforms / project / contact */}
-        <div className="grid grid-cols-12 gap-x-12 gap-y-8 items-start">
+        <div className="grid grid-cols-12 gap-x-12 gap-y-8 items-start max-md:grid-cols-2 max-md:gap-x-6 max-md:gap-y-[60px]">
 
           {/* Col 1 — Brand (col-span-5) */}
-          <div className="col-span-5 flex flex-col gap-4">
+          <div className="col-span-5 flex flex-col gap-4 max-md:col-span-2">
             <p className="uppercase" style={{ ...LABEL_STYLE, color: '#FF5C00' }}>
               DUSTED TAPE
             </p>
@@ -73,9 +73,9 @@ export default function Footer() {
           </div>
 
           {/* Col 2 — Platforms (col-span-3) */}
-          <AnimatedText delay={0.1} className="col-span-3 flex flex-col gap-4">
+          <AnimatedText delay={0.1} className="col-span-3 flex flex-col gap-4 max-md:col-span-1">
             <p className="uppercase" style={LABEL_STYLE}>PLATFORMS</p>
-            <div className="grid grid-cols-2 gap-x-8 gap-y-2.5">
+            <div className="grid grid-cols-2 gap-x-8 gap-y-2.5 max-md:grid-cols-1 max-md:gap-x-0">
               <div className="flex flex-col gap-2.5">
                 {PLATFORMS_LEFT.map(p => <NavLink key={p.label} href={p.href}>{p.label}</NavLink>)}
               </div>
@@ -86,7 +86,7 @@ export default function Footer() {
           </AnimatedText>
 
           {/* Col 3 — Project (col-span-2) */}
-          <AnimatedText delay={0.2} className="col-span-2 flex flex-col gap-4">
+          <AnimatedText delay={0.2} className="col-span-2 flex flex-col gap-4 max-md:col-span-1">
             <p className="uppercase" style={LABEL_STYLE}>PROJECT</p>
             <div className="flex flex-col gap-2.5">
               {PROJECT_LINKS.map(p => <NavLink key={p.label} href={p.href}>{p.label}</NavLink>)}
@@ -94,7 +94,7 @@ export default function Footer() {
           </AnimatedText>
 
           {/* Col 4 — Contact (col-span-2) */}
-          <AnimatedText delay={0.3} className="col-span-2 flex flex-col gap-4">
+          <AnimatedText delay={0.3} className="col-span-2 flex flex-col gap-4 max-md:col-span-2">
             <p className="uppercase" style={LABEL_STYLE}>CONTACT</p>
             <a
               href="mailto:dustedtape@gmail.com"
@@ -108,7 +108,7 @@ export default function Footer() {
         </div>
 
         {/* ── Copyright bar ── */}
-        <div className="flex justify-between items-center mt-32 mb-16">
+        <div className="flex justify-between items-center mt-32 mb-16 max-md:mt-[60px] max-md:mb-8">
 
           {/* Left — logo + copyright */}
           <div className="flex items-center gap-3">
@@ -121,7 +121,7 @@ export default function Footer() {
           {/* Right — scroll to top */}
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="flex items-center justify-center w-10 h-10 rounded-full border border-white/15 hover:border-white/40 transition-colors duration-200 cursor-pointer"
+            className="flex items-center justify-center w-10 h-10 rounded-full border border-white/15 hover:border-white/40 transition-colors duration-200 cursor-pointer max-md:w-8 max-md:h-8"
             aria-label="Scroll to top"
           >
             <img
@@ -146,7 +146,7 @@ export default function Footer() {
           {Array.from({ length: REPEATS }).map((_, i) => (
             <span
               key={i}
-              className="font-bold shrink-0 pr-16 select-none"
+              className="font-bold shrink-0 pr-16 select-none max-md:!text-[250px]"
               style={{
                 fontFamily: 'Outfit, sans-serif',
                 fontSize: '420px',

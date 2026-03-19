@@ -4,7 +4,7 @@ const ORANGE_FILTER = 'invert(40%) sepia(90%) saturate(800%) hue-rotate(355deg) 
 
 export default function Cta() {
   return (
-    <div style={{ backgroundColor: '#FFEEE8' }} className="pt-[260px]">
+    <div style={{ backgroundColor: '#FFEEE8' }} className="pt-[260px] max-md:pt-[160px]">
     <section className="relative w-full overflow-hidden" style={{ height: '620px' }}>
 
       {/* Video background */}
@@ -25,7 +25,7 @@ export default function Cta() {
 
         {/* Label pill */}
         <div
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/30 text-[11px] tracking-widest text-white mb-8"
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/30 text-[11px] tracking-widest text-white mb-8 max-md:mb-[28px]"
           style={{ fontFamily: 'Space Mono, monospace' }}
         >
           <img
@@ -39,7 +39,7 @@ export default function Cta() {
         </div>
 
         {/* Heading */}
-        <AnimatedText delay={0.1} className="mb-10" style={{ maxWidth: '850px', textAlign: 'center' }}>
+        <AnimatedText delay={0.1} className="mb-10 max-md:mb-[28px]" style={{ maxWidth: '850px', textAlign: 'center' }}>
           <h2
             className="text-white font-medium text-center leading-[1.1]"
             style={{
@@ -57,7 +57,7 @@ export default function Cta() {
             href="https://open.spotify.com/artist/5s9l2vzkNCq3jXYO3nyRLJ"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-8 py-3.5 rounded-full bg-white text-black text-[11px] tracking-widest font-normal transition-colors duration-200 hover:bg-gray-200"
+            className="inline-flex items-center px-8 py-3.5 rounded-full bg-white text-black text-[11px] tracking-widest font-normal transition-colors duration-200 hover:bg-gray-200 max-md:text-[10px] max-md:px-[19px]"
             style={{ fontFamily: 'Space Mono, monospace' }}
           >
             LISTEN ON SPOTIFY
@@ -66,7 +66,7 @@ export default function Cta() {
             href="https://www.youtube.com/@DUSTEDTAPE"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-8 py-3.5 rounded-full bg-white text-black text-[11px] tracking-widest font-normal transition-colors duration-200 hover:bg-gray-200"
+            className="inline-flex items-center px-8 py-3.5 rounded-full bg-white text-black text-[11px] tracking-widest font-normal transition-colors duration-200 hover:bg-gray-200 max-md:text-[10px] max-md:px-[19px]"
             style={{ fontFamily: 'Space Mono, monospace' }}
           >
             WATCH ON YOUTUBE

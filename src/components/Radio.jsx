@@ -36,7 +36,7 @@ export default function Radio() {
   return (
     <>
       <section id="radio" style={{ backgroundColor: '#FFEEE8' }} className="pt-[100px] pb-16 px-6">
-        <div className="max-w-5xl mx-auto flex flex-col items-center gap-8">
+        <div className="max-w-5xl mx-auto flex flex-col items-center gap-[25px] md:gap-8">
 
           {/* Eyebrow pill */}
           <div
@@ -48,15 +48,18 @@ export default function Radio() {
           </div>
 
           {/* Headings */}
+          {/* Mobile version */}
           <ScrollRevealText
-            text="Your daily dose of underground chaos. Continuous bass transmissions engineered to destroy silence and ignite the revolution."
-            className="font-medium text-black text-center mx-auto"
-            style={{
-              fontFamily: 'Outfit, sans-serif',
-              fontSize: 'clamp(1.75rem, 3vw, 2.5rem)',
-              lineHeight: '40px',
-              maxWidth: '820px',
-            }}
+            text="Your daily dose of underground <br /> chaos. Continuous bass <br /> transmissions engineered to <br /> destroy silence and ignite <br /> the revolution."
+            className="md:hidden text-black font-medium text-center mx-auto text-[25px] leading-[26px] w-full"
+            style={{ fontFamily: 'Outfit, sans-serif' }}
+          />
+
+          {/* Desktop version */}
+          <ScrollRevealText
+            text="Your daily dose of underground chaos. <br /> Continuous bass transmissions engineered to <br /> destroy silence and ignite the revolution."
+            className="hidden md:block text-black font-medium text-center mx-auto text-[40px] leading-[40px] max-w-[820px]"
+            style={{ fontFamily: 'Outfit, sans-serif' }}
           />
 
           {/* Card */}

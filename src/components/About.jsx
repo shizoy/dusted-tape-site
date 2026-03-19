@@ -13,10 +13,10 @@ const MANIFEST_TEXT =
 
 export default function About() {
   return (
-    <section id="about" style={{ backgroundColor: '#FFEEE8' }} className="pt-[320px] px-[245px]">
+    <section id="about" style={{ backgroundColor: '#FFEEE8' }} className="pt-[320px] px-[245px] max-md:pt-[120px] max-md:px-[30px]">
 
       {/* Label */}
-      <AnimatedText className="mb-6">
+      <AnimatedText className="mb-6 max-md:flex max-md:justify-start">
         <div
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border text-[11px] tracking-widest"
           style={{ fontFamily: 'Space Mono, monospace', color: '#000000', borderColor: '#CFCFCF' }}
@@ -33,11 +33,11 @@ export default function About() {
       </AnimatedText>
 
       {/* Two-column block — 12-col grid */}
-      <div className="w-full grid grid-cols-12 gap-8">
+      <div className="w-full grid grid-cols-12 gap-8 max-md:grid-cols-1 max-md:gap-0">
 
         {/* Left — manifest block */}
         <div
-          className="col-span-8 flex flex-col justify-between rounded-3xl p-10 h-[470px]"
+          className="col-span-8 flex flex-col justify-between rounded-3xl p-10 h-[470px] max-md:col-span-full max-md:h-auto max-md:!pt-[45px] max-md:!pb-[45px] max-md:!px-8 max-md:mb-[25px]"
           style={{ background: 'linear-gradient(180deg, #FFEEE8 0%, #FFD3C4 100%)' }}
         >
           {/* Top: quote icon */}
@@ -52,7 +52,7 @@ export default function About() {
           {/* Middle: manifest text — scroll reveal word by word */}
           <ScrollRevealText
             text={MANIFEST_TEXT}
-            className="text-black font-medium text-left"
+            className="text-black font-medium text-left max-md:!text-[22px] max-md:!leading-[24px] max-md:!pr-0 max-md:mt-[40px] max-md:mb-[40px]"
             style={{
               fontFamily: 'Outfit, sans-serif',
               fontSize: '34px',
@@ -80,7 +80,7 @@ export default function About() {
         </div>
 
         {/* Right — photo */}
-        <div className="col-span-4 rounded-3xl overflow-hidden h-[470px]">
+        <div className="col-span-4 rounded-3xl overflow-hidden h-[470px] max-md:col-span-full max-md:h-[420px]">
           <img
             src="/photoID.jpg"
             alt="Bohdan Fishbein — Founder, Dusted Tape"

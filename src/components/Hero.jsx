@@ -86,7 +86,7 @@ export default function Hero() {
         />
 
         {/* Content grid */}
-        <div className="relative z-10 h-full px-[245px] grid grid-cols-1 lg:grid-cols-2">
+        <div className="relative z-10 h-full px-[30px] md:px-[245px] grid grid-cols-1 lg:grid-cols-2">
 
           {/* Left — text */}
           <div className="flex flex-col justify-center gap-5 py-12">
@@ -100,7 +100,7 @@ export default function Hero() {
 
             <AnimatedText delay={0.1}>
               <h1
-                className="text-[clamp(2.8rem,6vw,5.5rem)] font-medium text-white leading-[0.93] tracking-tight"
+                className="text-[36px] md:text-[clamp(2.8rem,6vw,5.5rem)] font-medium text-white leading-[0.93] tracking-tight text-left max-md:text-[42px] max-md:leading-[0.95]"
                 style={{ fontFamily: 'Outfit, sans-serif' }}
               >
                 Underground<br />
@@ -111,13 +111,14 @@ export default function Hero() {
 
             <AnimatedText delay={0.25}>
               <p
-                className="text-sm text-white/55 leading-relaxed max-w-sm"
+                className="text-sm text-white/55 leading-[1.5] max-w-full md:max-w-sm"
                 style={{ fontFamily: 'Outfit, sans-serif' }}
               >
-                DUSTED TAPE is a dark phonk transmission system. Heavy bass
-                frequencies. Distorted Memphis samples. Industrial noise and
-                underground energy. We broadcast phonk mixes, releases and dark sound
-                systems designed to shake speakers and break silence. No mainstream
+                DUSTED TAPE is a dark phonk transmission system.<br className="block md:hidden" />
+                Heavy bass frequencies. Distorted Memphis samples.<br className="block md:hidden" />
+                Industrial noise and underground energy. We broadcast<br className="block md:hidden" />
+                phonk mixes, releases and dark sound systems designed<br className="block md:hidden" />
+                to shake speakers and break silence. No mainstream<br className="block md:hidden" />
                 filters. Only signal.
               </p>
             </AnimatedText>
@@ -137,7 +138,7 @@ export default function Hero() {
 
           </div>
 
-          {/* Right — mix card */}
+          {/* Right — mix card (desktop only) */}
           <div className="hidden lg:flex flex-col justify-end items-end pb-12">
             <MixCard onPlay={() => setActiveVideo(HERO_MIX_URL)} />
           </div>

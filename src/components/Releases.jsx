@@ -65,11 +65,11 @@ function PlayIcon() {
 
 function ReleaseCard({ release, onPlay }) {
   return (
-    <div className={`flex items-center gap-16 ${release.flip ? 'flex-row-reverse' : 'flex-row'}`}>
+    <div className={`flex items-center gap-16 max-md:flex-col-reverse max-md:gap-0 max-md:items-stretch ${release.flip ? 'flex-row-reverse' : 'flex-row'}`}>
 
       {/* ── Image container 740×695 ── */}
       <div
-        className="shrink-0 rounded-3xl flex flex-col items-center justify-between overflow-hidden"
+        className="shrink-0 rounded-3xl flex flex-col items-center justify-between overflow-hidden max-md:!w-full max-md:!max-w-full max-md:!h-auto max-md:!min-h-0 max-md:!bg-[#F8E2D6] max-md:![background-image:none] max-md:!rounded-[40px] max-md:px-[30px] max-md:pt-[30px] max-md:pb-[30px]"
         style={{
           width: '740px',
           height: '695px',
@@ -78,7 +78,7 @@ function ReleaseCard({ release, onPlay }) {
       >
         {/* Image 680×500 — floating shadow */}
         <div
-          className="relative mt-7 rounded-2xl overflow-hidden shrink-0"
+          className="relative mt-7 rounded-2xl overflow-hidden shrink-0 max-md:!w-full max-md:!max-w-full max-md:!h-auto max-md:!mt-0 max-md:aspect-[680/500]"
           style={{
             width: '680px',
             height: '500px',
@@ -124,7 +124,7 @@ function ReleaseCard({ release, onPlay }) {
             aria-label={`Play ${release.title}`}
           >
             <span
-              className="flex items-center justify-center w-16 h-16 rounded-full transition-transform duration-200 group-hover:scale-105"
+              className="flex items-center justify-center w-16 h-16 rounded-full transition-transform duration-200 group-hover:scale-105 max-md:scale-[0.8]"
               style={{ backgroundColor: '#1DB954' }}
             >
               <span className="text-white">
@@ -134,8 +134,8 @@ function ReleaseCard({ release, onPlay }) {
           </button>
         </div>
 
-        {/* Tags — pushed to bottom */}
-        <div className="flex flex-col gap-2.5 pb-8 self-start pl-8">
+        {/* Tags — below image (desktop: inside gradient card, mobile: same position) */}
+        <div className="flex flex-col gap-2.5 pb-8 self-start pl-8 max-md:mt-[30px] max-md:pb-0 max-md:pl-0 max-md:self-stretch">
           {release.tags.map((tag) => (
             <div key={tag} className="flex items-center gap-2.5">
               <img
@@ -157,7 +157,7 @@ function ReleaseCard({ release, onPlay }) {
       </div>
 
       {/* ── Text block ── */}
-      <AnimatedText delay={0.15} className="flex flex-col gap-5 max-w-xs">
+      <AnimatedText delay={0.15} className="flex flex-col gap-5 max-w-xs max-md:max-w-none max-md:mb-[50px]">
         <p
           className="text-[10px] tracking-[0.2em] text-black/35"
           style={{ fontFamily: 'Space Mono, monospace' }}
@@ -166,14 +166,14 @@ function ReleaseCard({ release, onPlay }) {
         </p>
 
         <h3
-          className="text-black leading-tight tracking-tight"
+          className="text-black leading-tight tracking-tight max-md:!text-[30px] max-md:!leading-[32px]"
           style={{ fontFamily: 'Outfit, sans-serif', fontSize: '38px', fontWeight: 500 }}
         >
           {release.title}
         </h3>
 
         <p
-          className="text-[10px] leading-relaxed tracking-wider"
+          className="text-[10px] leading-relaxed tracking-wider max-md:!text-[10px] max-md:!leading-[16px]"
           style={{ fontFamily: 'Space Mono, monospace', color: '#6B6B6B' }}
         >
           {release.description}
@@ -206,18 +206,29 @@ export default function Releases() {
 
   return (
     <>
-      <section id="release" style={{ backgroundColor: '#FFEEE8' }} className="pt-[320px] pb-24 px-[245px]">
+      <section id="release" style={{ backgroundColor: '#FFEEE8' }} className="pt-[320px] pb-24 px-[245px] max-md:pt-[385px] max-md:px-[30px]">
 
         {/* Header row */}
-        <div className="flex items-start justify-end gap-[305px] mb-20">
+        <div className="flex items-start justify-end gap-[305px] mb-20 max-md:flex-col-reverse max-md:items-end max-md:gap-4">
 
           <ScrollRevealText
             text="Raw phonk transmissions engineered <br /> inside the Dusted Tape system. <br /> Listen to the latest official releases."
-            className="font-medium text-black text-right ml-auto"
+            className="font-medium text-black text-right ml-auto max-md:hidden"
             style={{ fontFamily: 'Outfit, sans-serif', fontSize: '40px', lineHeight: '40px', maxWidth: '750px' }}
           />
 
-          <div className="shrink-0 pt-1">
+          {/* Mobile-only title with exact line breaks */}
+          <p
+            className="hidden max-md:block font-medium text-black text-right"
+            style={{ fontFamily: 'Outfit, sans-serif', fontSize: '25px', lineHeight: '26px' }}
+          >
+            Raw phonk transmissions<br />
+            engineered inside the Dusted<br />
+            Tape system. Listen to the latest<br />
+            official releases.
+          </p>
+
+          <div className="shrink-0 pt-1 max-md:pt-0">
             <div
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border text-[11px] tracking-widest"
               style={{ fontFamily: 'Space Mono, monospace', color: '#000000', borderColor: '#CFCFCF' }}
@@ -236,13 +247,14 @@ export default function Releases() {
         </div>
 
         {/* Staggered releases */}
-        <div className="flex flex-col gap-24">
-          {RELEASES.map((release) => (
-            <ReleaseCard
-              key={release.id}
-              release={release}
-              onPlay={(url) => setActiveTrack(url)}
-            />
+        <div className="flex flex-col gap-24 max-md:gap-8">
+          {RELEASES.map((release, index) => (
+            <div key={release.id} className={index > 0 ? 'max-md:mt-[120px]' : ''}>
+              <ReleaseCard
+                release={release}
+                onPlay={(url) => setActiveTrack(url)}
+              />
+            </div>
           ))}
         </div>
 

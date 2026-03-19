@@ -30,8 +30,8 @@ function LogoItem({ src, alt }) {
 
 export default function StreamingLogos() {
   return (
-    <section style={{ backgroundColor: '#FFEEE8' }} className="pt-[320px] pb-10 px-6">
-      <div className="max-w-5xl mx-auto flex flex-col items-center gap-6">
+    <section style={{ backgroundColor: '#FFEEE8' }} className="pt-[320px] pb-10 px-0 md:px-6">
+      <div className="px-[30px] md:px-0 max-w-5xl md:mx-auto flex flex-col items-center gap-6">
 
         {/* Eyebrow pill */}
         <div
@@ -44,7 +44,7 @@ export default function StreamingLogos() {
 
       </div>
 
-      {/* Marquee strip — full bleed */}
+      {/* Marquee strip — full bleed on all screens */}
       <div className="w-full mt-[30px] overflow-hidden" style={{ borderTop: '1px solid #000', borderBottom: '1px solid #000' }}>
           <div className="flex items-center py-[60px] marquee-track">
           {/* Two full sets for seamless loop */}
@@ -55,7 +55,7 @@ export default function StreamingLogos() {
       </div>
 
       {/* Bottom caption */}
-      <div className="max-w-5xl mx-auto flex flex-col items-center mt-[30px]">
+      <div className="px-[30px] md:px-0 max-w-5xl md:mx-auto flex flex-col items-center mt-[30px]">
         <p
           className="text-[10px] tracking-[0.18em] text-black/50 text-center leading-relaxed"
           style={{ fontFamily: 'Space Mono, monospace' }}

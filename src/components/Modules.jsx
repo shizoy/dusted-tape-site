@@ -54,77 +54,126 @@ const MODULES = [
 
 export default function Modules() {
   return (
-    <section style={{ backgroundColor: '#FFEEE8' }} className="pt-[450px] pb-24 px-[245px]">
+    <section style={{ backgroundColor: '#FFEEE8' }} className="max-md:pt-[385px] md:pt-[450px] pb-24 px-[30px] md:px-[245px]">
 
-      {/* Two-column layout: label left | heading + grid right */}
-      <div className="flex items-start gap-[450px]">
+      {/* ── DESKTOP layout — hidden on mobile ── */}
+      <div className="hidden md:block">
+        <div className="flex items-start gap-[450px]">
 
-        {/* Left column: label only — aligns with logo */}
-        <div className="shrink-0 pt-1">
-          <div
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border text-[11px] tracking-widest"
-            style={{ fontFamily: 'Space Mono, monospace', color: '#000000', borderColor: '#CFCFCF' }}
-          >
-            <ModulesIcon />
-            SIGNAL MODULES
-          </div>
-        </div>
-
-        {/* Right column: heading + grid share the same left edge */}
-        <div className="flex-1 flex flex-col gap-12 pl-[80px]">
-
-          {/* Heading */}
-          <ScrollRevealText
-            text="Explore the signal, the sound, and <br /> the visuals behind the broadcast system."
-            className="text-3xl sm:text-4xl font-medium text-black leading-[1.05]"
-            style={{ fontFamily: 'Outfit, sans-serif' }}
-          />
-
-          {/* Modules grid */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
-            {MODULES.map((mod, index) => (
-              <AnimatedText key={mod.title} delay={0.1 + index * 0.1}>
-              <div className="flex flex-col gap-3">
-
-                {/* Icon */}
-                <OrangeIcon src={mod.icon} alt={mod.title} size="w-6 h-6" />
-
-                {/* Title */}
-                <h3
-                  className="text-base font-medium text-black leading-tight"
-                  style={{ fontFamily: 'Outfit, sans-serif' }}
-                >
-                  {mod.title}
-                </h3>
-
-                {/* Description */}
-                <p
-                  className="text-[11px] leading-relaxed -mt-1"
-                  style={{ fontFamily: 'Space Mono, monospace', color: '#6B6B6B' }}
-                >
-                  {mod.lines.map((line, i) => (
-                    <span key={i}>{line}{i < mod.lines.length - 1 && <br />}</span>
-                  ))}
-                </p>
-
-                {/* Link — text black, arrow orange */}
-                <a
-                  href={mod.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-[10px] font-normal tracking-widest underline underline-offset-4 transition-opacity duration-200 hover:opacity-60 mt-auto"
-                  style={{ fontFamily: 'Space Mono, monospace', color: '#000000' }}
-                >
-                  {mod.link}
-                  <ArrowIcon />
-                </a>
-
-              </div>
-              </AnimatedText>
-            ))}
+          {/* Left: label */}
+          <div className="shrink-0 pt-1">
+            <div
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border text-[11px] tracking-widest"
+              style={{ fontFamily: 'Space Mono, monospace', color: '#000000', borderColor: '#CFCFCF' }}
+            >
+              <ModulesIcon />
+              SIGNAL MODULES
+            </div>
           </div>
 
+          {/* Right: heading + grid */}
+          <div className="flex-1 flex flex-col gap-12 pl-[80px]">
+
+            <ScrollRevealText
+              text="Explore the signal, the sound, and <br /> the visuals behind the broadcast system."
+              className="text-3xl sm:text-4xl font-medium text-black leading-[1.05]"
+              style={{ fontFamily: 'Outfit, sans-serif' }}
+            />
+
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
+              {MODULES.map((mod, index) => (
+                <AnimatedText key={mod.title} delay={0.1 + index * 0.1}>
+                  <div className="flex flex-col gap-3">
+                    <OrangeIcon src={mod.icon} alt={mod.title} size="w-6 h-6" />
+                    <h3
+                      className="text-base font-medium text-black leading-tight"
+                      style={{ fontFamily: 'Outfit, sans-serif' }}
+                    >
+                      {mod.title}
+                    </h3>
+                    <p
+                      className="text-[11px] leading-relaxed -mt-1"
+                      style={{ fontFamily: 'Space Mono, monospace', color: '#6B6B6B' }}
+                    >
+                      {mod.lines.map((line, i) => (
+                        <span key={i}>{line}{i < mod.lines.length - 1 && <br />}</span>
+                      ))}
+                    </p>
+                    <a
+                      href={mod.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-[10px] font-normal tracking-widest underline underline-offset-4 transition-opacity duration-200 hover:opacity-60 mt-auto"
+                      style={{ fontFamily: 'Space Mono, monospace', color: '#000000' }}
+                    >
+                      {mod.link}
+                      <ArrowIcon />
+                    </a>
+                  </div>
+                </AnimatedText>
+              ))}
+            </div>
+
+          </div>
         </div>
+      </div>
+
+      {/* ── MOBILE layout — hidden on desktop ── */}
+      <div className="md:hidden flex flex-col">
+
+        {/* Label — self-start keeps pill compact, mb-[25px] sets exact gap to heading */}
+        <div
+          className="inline-flex self-start md:self-auto items-center gap-2 px-4 py-1.5 rounded-full border text-[11px] tracking-widest mb-[25px]"
+          style={{ fontFamily: 'Space Mono, monospace', color: '#000000', borderColor: '#CFCFCF' }}
+        >
+          <ModulesIcon />
+          SIGNAL MODULES
+        </div>
+
+        {/* Heading */}
+        <h2
+          className="text-black font-medium text-left text-[25px] leading-[26px] w-full"
+          style={{ fontFamily: 'Outfit, sans-serif' }}
+        >
+          Explore the signal, the sound, and the visuals behind the broadcast system.
+        </h2>
+
+        {/* 2×2 grid — mt-12 gap below heading */}
+        <div className="grid grid-cols-2 gap-x-8 gap-y-12 mt-12">
+          {MODULES.map((mod) => (
+            <div key={mod.title} className="flex flex-col gap-3 text-left">
+
+              <OrangeIcon src={mod.icon} alt={mod.title} size="w-6 h-6" />
+
+              <h3
+                className="text-base font-medium text-black leading-snug"
+                style={{ fontFamily: 'Outfit, sans-serif' }}
+              >
+                {mod.title}
+              </h3>
+
+              <p
+                className="text-[11px] leading-relaxed opacity-70 text-black"
+                style={{ fontFamily: 'Space Mono, monospace' }}
+              >
+                {mod.lines.join(' ')}
+              </p>
+
+              <a
+                href={mod.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-[10px] font-normal tracking-widest underline underline-offset-4 transition-opacity duration-200 hover:opacity-60 mt-auto"
+                style={{ fontFamily: 'Space Mono, monospace', color: '#000000' }}
+              >
+                {mod.link}
+                <ArrowIcon />
+              </a>
+
+            </div>
+          ))}
+        </div>
+
       </div>
 
     </section>
