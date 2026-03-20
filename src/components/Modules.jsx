@@ -54,7 +54,7 @@ const MODULES = [
 
 export default function Modules() {
   return (
-    <section style={{ backgroundColor: '#FFEEE8' }} className="max-md:pt-[385px] md:pt-[450px] pb-24 px-[30px] md:px-[245px]">
+    <section style={{ backgroundColor: '#FFEEE8' }} className="max-md:pt-[150px] md:pt-[450px] pb-24 px-[30px] md:px-[245px]">
 
       {/* ── DESKTOP layout — hidden on mobile ── */}
       <div className="hidden md:block">

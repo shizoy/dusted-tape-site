@@ -206,7 +206,7 @@ export default function Releases() {
 
   return (
     <>
-      <section id="release" style={{ backgroundColor: '#FFEEE8' }} className="pt-[320px] pb-24 px-[245px] max-md:pt-[385px] max-md:px-[30px]">
+      <section id="release" style={{ backgroundColor: '#FFEEE8' }} className="pt-[320px] pb-24 px-[245px] max-md:pt-[150px] max-md:px-[30px]">
 
         {/* Header row */}
         <div className="flex items-start justify-end gap-[305px] mb-20 max-md:flex-col-reverse max-md:items-end max-md:gap-4">

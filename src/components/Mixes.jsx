@@ -66,7 +66,7 @@ export default function Mixes() {
   }
 
   return (
-    <section id="mixes" style={{ backgroundColor: '#FFEEE8' }} className="max-md:pt-[385px] md:pt-[320px] pb-24 overflow-hidden">
+    <section id="mixes" style={{ backgroundColor: '#FFEEE8' }} className="max-md:pt-[150px] md:pt-[320px] pb-24 overflow-hidden">
       
       {/* Label Box */}
       <div className="flex flex-col items-center w-full mb-6 px-[30px] md:px-[245px]">

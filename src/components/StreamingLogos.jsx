@@ -30,7 +30,7 @@ function LogoItem({ src, alt }) {
 
 export default function StreamingLogos() {
   return (
-    <section style={{ backgroundColor: '#FFEEE8' }} className="pt-[320px] pb-10 px-0 md:px-6">
+    <section style={{ backgroundColor: '#FFEEE8' }} className="max-md:pt-[150px] md:pt-[320px] pb-10 px-0 md:px-6">
       <div className="px-[30px] md:px-0 max-w-5xl md:mx-auto flex flex-col items-center gap-6">
 
         {/* Eyebrow pill */}
