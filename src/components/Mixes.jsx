@@ -21,6 +21,8 @@ const mixesData = [
   { id: 16, title: 'Iron Swine',           date: 'MAR 04, 2026', time: '66 MIN', image: '/swine-img.jpg',        link: 'https://www.youtube.com/watch?v=4ZSyashJL2o&t=3386s'  },
   { id: 17, title: 'War Machine',          date: 'MAR 09, 2026', time: '60 MIN', image: '/warmachine-img.jpg',   link: 'https://www.youtube.com/watch?v=efWHoUtst_0&t=84s'    },
   { id: 18, title: 'Null Prophet',         date: 'MAR 15, 2026', time: '66 MIN', image: '/nullprophet-img.jpg',  link: 'https://www.youtube.com/watch?v=iovO5OBfBQ0&t=173s'   },
+  { id: 19, title: 'Chrome Fang',         date: 'MAR 21, 2026', time: '61 MIN', image: '/chromefang-img.jpg',   link: 'https://www.youtube.com/watch?v=KCVFmRuQk7M'           },
+  { id: 20, title: 'Shark Mode',          date: 'MAR 28, 2026', time: '67 MIN', image: '/sharkmode-img.jpg',    link: 'https://www.youtube.com/watch?v=oq3F5nyRBJU'           },
 ]
 
 function PlayIcon() { return <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 ml-0.5"><path d="M8 5.14v14l11-7-11-7z" /></svg> }
