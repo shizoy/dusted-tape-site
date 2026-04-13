@@ -23,8 +23,10 @@ const mixesData = [
   { id: 18, title: 'Null Prophet',         date: 'MAR 15, 2026', time: '66 MIN', image: '/nullprophet-img.jpg',  link: 'https://www.youtube.com/watch?v=iovO5OBfBQ0&t=173s'   },
   { id: 19, title: 'Chrome Fang',         date: 'MAR 21, 2026', time: '61 MIN', image: '/chromefang-img.jpg',   link: 'https://www.youtube.com/watch?v=KCVFmRuQk7M'           },
   { id: 20, title: 'Shark Mode',          date: 'MAR 28, 2026', time: '67 MIN', image: '/sharkmode-img.jpg',    link: 'https://www.youtube.com/watch?v=oq3F5nyRBJU'           },
-  { id: 21, title: 'Crimson Doll',        date: 'APR 03, 2026', time: '72 MIN', image: '/crimsondoll-img.jpg',  link: 'https://www.youtube.com/watch?v=isRNjJADvpg'           },
-  { id: 22, title: 'Containment',         date: 'APR 09, 2026', time: '79 MIN', image: '/containment-img.jpg',  link: 'https://www.youtube.com/watch?v=CHS-DmBUNuU'           },
+  { id: 21, title: 'Crimson Doll',        date: 'APR 03, 2026', time: '72 MIN', image: '/crimsondoll-img.jpg',    link: 'https://www.youtube.com/watch?v=isRNjJADvpg'           },
+  { id: 22, title: 'Containment',         date: 'APR 09, 2026', time: '79 MIN', image: '/containment-img.jpg',   link: 'https://www.youtube.com/watch?v=CHS-DmBUNuU'           },
+  { id: 23, title: 'Void Prophet',        date: 'APR 11, 2026', time: '75 MIN', image: '/voidprophet-img.jpg',   link: 'https://www.youtube.com/watch?v=HDwl9kbtbKs'           },
+  { id: 24, title: 'Spore Protocol',      date: 'APR 13, 2026', time: '74 MIN', image: '/sporeprotocol-img.jpg', link: 'https://www.youtube.com/watch?v=GAA4N5fqda0'           },
 ]
 
 function PlayIcon() { return <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 ml-0.5"><path d="M8 5.14v14l11-7-11-7z" /></svg> }
