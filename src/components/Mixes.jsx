@@ -27,6 +27,8 @@ const mixesData = [
   { id: 22, title: 'Containment',         date: 'APR 09, 2026', time: '79 MIN', image: '/containment-img.jpg',   link: 'https://www.youtube.com/watch?v=CHS-DmBUNuU'           },
   { id: 23, title: 'Void Prophet',        date: 'APR 11, 2026', time: '75 MIN', image: '/voidprophet-img.jpg',   link: 'https://www.youtube.com/watch?v=HDwl9kbtbKs'           },
   { id: 24, title: 'Spore Protocol',      date: 'APR 13, 2026', time: '74 MIN', image: '/sporeprotocol-img.jpg', link: 'https://www.youtube.com/watch?v=GAA4N5fqda0'           },
+  { id: 25, title: 'Dark Ignition',       date: 'APR 15, 2026', time: '64 MIN', image: '/darkignition-img.jpg',  link: 'https://www.youtube.com/watch?v=ALvg2oYytvo'           },
+  { id: 26, title: 'Beast Market',        date: 'APR 17, 2026', time: '77 MIN', image: '/beastmarket-img.jpg',   link: 'https://www.youtube.com/watch?v=l2mefYIjF58'           },
 ]
 
 function PlayIcon() { return <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 ml-0.5"><path d="M8 5.14v14l11-7-11-7z" /></svg> }
