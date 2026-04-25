@@ -31,6 +31,8 @@ const mixesData = [
   { id: 26, title: 'Beast Market',        date: 'APR 17, 2026', time: '77 MIN', image: '/beastmarket-img.jpg',   link: 'https://www.youtube.com/watch?v=l2mefYIjF58'           },
   { id: 27, title: 'Sector Enforcer',     date: 'APR 19, 2026', time: '69 MIN', image: '/sectorenforcer-img.jpg', link: 'https://www.youtube.com/watch?v=yFN3HLXYPaw'           },
   { id: 28, title: 'Neural Procedure',    date: 'APR 21, 2026', time: '67 MIN', image: '/neuralprocedure-img.jpg', link: 'https://www.youtube.com/watch?v=O7Qk-jpASxo'           },
+  { id: 29, title: 'Moss Giant',          date: 'APR 23, 2026', time: '91 MIN', image: '/mossgiant-img.jpg',       link: 'https://www.youtube.com/watch?v=6opcOTENzMg'           },
+  { id: 30, title: 'Desert Ronin',        date: 'APR 25, 2026', time: '91 MIN', image: '/desertronin-img.jpg',     link: 'https://www.youtube.com/watch?v=gEljkPJkwXQ'           },
 ]
 
 function PlayIcon() { return <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 ml-0.5"><path d="M8 5.14v14l11-7-11-7z" /></svg> }
