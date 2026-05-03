@@ -35,6 +35,8 @@ const mixesData = [
   { id: 30, title: 'Desert Ronin',        date: 'APR 25, 2026', time: '91 MIN', image: '/desertronin-img.jpg',     link: 'https://www.youtube.com/watch?v=gEljkPJkwXQ'           },
   { id: 31, title: 'Jade Mask',           date: 'APR 27, 2026', time: '71 MIN', image: '/jademask-img.jpg',         link: 'https://www.youtube.com/watch?v=Q4x8dHK3-Os'          },
   { id: 32, title: 'Red Crawler',         date: 'APR 29, 2026', time: '62 MIN', image: '/redcrawler-img.jpg',       link: 'https://www.youtube.com/watch?v=EMTrLB_DU4I'          },
+  { id: 33, title: 'Horned Fury',         date: 'MAY 01, 2026', time: '77 MIN', image: '/hornedfury-img.jpg',       link: 'https://www.youtube.com/watch?v=wA0fZSkXMRM'          },
+  { id: 34, title: 'Spider King',         date: 'MAY 03, 2026', time: '77 MIN', image: '/spiderking-img.jpg',       link: 'https://www.youtube.com/watch?v=03PJuq4YorU'          },
 ]
 
 function PlayIcon() { return <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 ml-0.5"><path d="M8 5.14v14l11-7-11-7z" /></svg> }
