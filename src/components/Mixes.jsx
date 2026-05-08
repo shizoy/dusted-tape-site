@@ -37,6 +37,8 @@ const mixesData = [
   { id: 32, title: 'Red Crawler',         date: 'APR 29, 2026', time: '62 MIN', image: '/redcrawler-img.jpg',       link: 'https://www.youtube.com/watch?v=EMTrLB_DU4I'          },
   { id: 33, title: 'Horned Fury',         date: 'MAY 01, 2026', time: '77 MIN', image: '/hornedfury-img.jpg',       link: 'https://www.youtube.com/watch?v=wA0fZSkXMRM'          },
   { id: 34, title: 'Spider King',         date: 'MAY 03, 2026', time: '77 MIN', image: '/spiderking-img.jpg',       link: 'https://www.youtube.com/watch?v=03PJuq4YorU'          },
+  { id: 35, title: 'Pale Navigator',      date: 'MAY 05, 2026', time: '81 MIN', image: '/palenavigator-img.jpg',    link: 'https://www.youtube.com/watch?v=BNllqBhUSRo'          },
+  { id: 36, title: 'Tape Eater',          date: 'MAY 07, 2026', time: '71 MIN', image: '/tapeeater-img.jpg',        link: 'https://www.youtube.com/watch?v=zaWIAvKQs7Q'          },
 ]
 
 function PlayIcon() { return <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 ml-0.5"><path d="M8 5.14v14l11-7-11-7z" /></svg> }
