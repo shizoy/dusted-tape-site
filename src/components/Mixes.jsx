@@ -41,6 +41,9 @@ const mixesData = [
   { id: 36, title: 'Tape Eater',          date: 'MAY 07, 2026', time: '71 MIN', image: '/tapeeater-img.jpg',        link: 'https://www.youtube.com/watch?v=zaWIAvKQs7Q'          },
   { id: 37, title: 'Crypt Fairy',         date: 'MAY 09, 2026', time: '80 MIN', image: '/cryptfairy-img.jpg',      link: 'https://www.youtube.com/watch?v=uauGRnB3vYQ'          },
   { id: 38, title: 'Rust Samurai',        date: 'MAY 11, 2026', time: '71 MIN', image: '/rustsamurai-img.jpg',     link: 'https://www.youtube.com/watch?v=0wtHzeaYbQc'          },
+  { id: 39, title: 'Flesh Crown',         date: 'MAY 13, 2026', time: '72 MIN', image: '/fleshcrown-img.jpg',      link: 'https://www.youtube.com/watch?v=2CXXBWjsb7A'          },
+  { id: 40, title: 'Cold Pilot',          date: 'MAY 15, 2026', time: '68 MIN', image: '/coldpilot-img.jpg',       link: 'https://www.youtube.com/watch?v=XM5UxvfyIP0'          },
+  { id: 41, title: 'Infected Unit',       date: 'MAY 17, 2026', time: '66 MIN', image: '/infectedunit-img.jpg',    link: 'https://www.youtube.com/watch?v=5yk4ZlV-F-Q'          },
 ]
 
 function PlayIcon() { return <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 ml-0.5"><path d="M8 5.14v14l11-7-11-7z" /></svg> }
