@@ -48,6 +48,9 @@ const mixesData = [
   { id: 43, title: 'Marigold Phantom',    date: 'MAY 21, 2026', time: '71 MIN', image: '/marigoldphantom-img.jpg', link: 'https://www.youtube.com/watch?v=WOsAvlPSt7Y'          },
   { id: 44, title: 'Lens Of Doom',        date: 'MAY 23, 2026', time: '63 MIN', image: '/lensofdoom-img.jpg',      link: 'https://www.youtube.com/watch?v=dNS0HhyLp9I'          },
   { id: 45, title: 'The Verdict',         date: 'MAY 25, 2026', time: '61 MIN', image: '/theverdict-img.jpg',      link: 'https://www.youtube.com/watch?v=TaefWsJntsw'          },
+  { id: 46, title: 'Ghost Legion',        date: 'MAY 27, 2026', time: '79 MIN', image: '/ghostlegion-img.jpg',     link: 'https://www.youtube.com/watch?v=uZ8S4wWGXlU'          },
+  { id: 47, title: 'Cyber Hollow',        date: 'MAY 29, 2026', time: '76 MIN', image: '/cyberhollow-img.jpg',     link: 'https://www.youtube.com/watch?v=9VBo016tvsQ'          },
+  { id: 48, title: 'Bone Séance',         date: 'MAY 31, 2026', time: '60 MIN', image: '/boneseance-img.jpg',      link: 'https://www.youtube.com/watch?v=WvRJ23v7SGM'          },
 ]
 
 function PlayIcon() { return <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 ml-0.5"><path d="M8 5.14v14l11-7-11-7z" /></svg> }
