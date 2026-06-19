@@ -54,6 +54,10 @@ const mixesData = [
   { id: 49, title: 'Cyber Oni',           date: 'JUN 02, 2026', time: '61 MIN', image: '/cyberoni-img.jpg',        link: 'https://www.youtube.com/watch?v=gQKy7r8v0sA'          },
   { id: 50, title: 'Thousand Eyes',       date: 'JUN 04, 2026', time: '64 MIN', image: '/thousandeyes-img.jpg',    link: 'https://www.youtube.com/watch?v=GWP3clZ9JLU'          },
   { id: 51, title: 'Orbit Runner',        date: 'JUN 06, 2026', time: '71 MIN', image: '/orbitrunner-img.jpg',     link: 'https://www.youtube.com/watch?v=rzlNtRcTJLI'          },
+  { id: 52, title: 'Phantom Rave',        date: 'JUN 09, 2026', time: '76 MIN', image: '/phantomrave-img.jpg',     link: 'https://www.youtube.com/watch?v=60mPQeCAk3g'          },
+  { id: 53, title: 'Frost Marshal',       date: 'JUN 12, 2026', time: '76 MIN', image: '/frostmarshal-img.jpg',    link: 'https://www.youtube.com/watch?v=1bvJKCSH9FY'          },
+  { id: 54, title: 'Pink Static',         date: 'JUN 15, 2026', time: '60 MIN', image: '/pinkstatic-img.jpg',      link: 'https://www.youtube.com/watch?v=4Qfrsbvtct0'          },
+  { id: 55, title: 'Pale Machine',        date: 'JUN 18, 2026', time: '65 MIN', image: '/palemachine-img.jpg',     link: 'https://www.youtube.com/watch?v=b3VN43EOaeQ'          },
 ]
 
 function PlayIcon() { return <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 ml-0.5"><path d="M8 5.14v14l11-7-11-7z" /></svg> }
