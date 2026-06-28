@@ -58,6 +58,9 @@ const mixesData = [
   { id: 53, title: 'Frost Marshal',       date: 'JUN 12, 2026', time: '76 MIN', image: '/frostmarshal-img.jpg',    link: 'https://www.youtube.com/watch?v=1bvJKCSH9FY'          },
   { id: 54, title: 'Pink Static',         date: 'JUN 15, 2026', time: '60 MIN', image: '/pinkstatic-img.jpg',      link: 'https://www.youtube.com/watch?v=4Qfrsbvtct0'          },
   { id: 55, title: 'Pale Machine',        date: 'JUN 18, 2026', time: '65 MIN', image: '/palemachine-img.jpg',     link: 'https://www.youtube.com/watch?v=b3VN43EOaeQ'          },
+  { id: 56, title: 'Red Corridor',        date: 'JUN 21, 2026', time: '62 MIN', image: '/redcorridor-img.jpg',     link: 'https://www.youtube.com/watch?v=5AbUUDA7xZM'          },
+  { id: 57, title: 'Noodle Bar',          date: 'JUN 24, 2026', time: '75 MIN', image: '/noodlebar-img.jpg',       link: 'https://www.youtube.com/watch?v=7a3GgDUi8K4'          },
+  { id: 58, title: 'Deep Current',        date: 'JUN 28, 2026', time: '89 MIN', image: '/deepcurrent-img.jpg',     link: 'https://www.youtube.com/watch?v=4a3XD8ylMMY'          },
 ]
 
 function PlayIcon() { return <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 ml-0.5"><path d="M8 5.14v14l11-7-11-7z" /></svg> }
